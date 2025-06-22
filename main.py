@@ -1,4 +1,21 @@
+import random
+
 MAX_LINES = 3
+MAX_BET = 100
+MIN_BET = 1
+
+ROWS = 3
+COLS = 3
+
+symbol_count = {
+    "A": 2,
+    "B": 4,
+    "C": 6,
+    "D": 8
+}
+
+def get_slot_machine_spin(rows, cols, symbols):
+    
 
 def deposit():
     while True:
@@ -17,9 +34,39 @@ def deposit():
 def num_of_lines():
     while True:
         lines = input("Enter how many Lines (1-" + str(MAX_LINES) + "): ")
+        if lines.isdigit():
+            lines = int(lines)
+            if 1 <= lines <= MAX_LINES:
+                break
+            else:
+                print("Please enter a valid number")
+    return lines
+
+def get_bet():
+    while True:
+        bet_amount = input("What would you like to bet? $")
+        if bet_amount.isdigit():
+            bet_amount = int(bet_amount)
+            if MIN_BET <= bet_amount <= MAX_BET:
+                break
+            else:
+                print(f"Please enter a valid Bet amount between ${MIN_BET} and ${MAX_BET}.")
+    return bet_amount
+
 
 
 def main():
     balance = deposit()
+    lines = num_of_lines()
+
+    while True:
+        bet = get_bet()
+        total_bet = bet * lines
+
+        if total_bet > balance:
+            print(f"Sorry, You don't have enough money! Your current balance is ${balance}")
+        else:
+            break
+    print(f"You are betting ${bet} on {lines} Lines. Total bet is equal to: ${total_bet}")
 
 main()
