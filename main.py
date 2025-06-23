@@ -28,8 +28,8 @@ def deposit():
                 print("Amount must be greater than 0")
         else:
             print("Please enter a valid amount")
-
     return amount
+
 
 def num_of_lines():
     while True:
