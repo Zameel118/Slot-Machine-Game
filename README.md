@@ -126,9 +126,6 @@ Feel free to fork this project and submit pull requests for improvements such as
 - Adding sound effects or better graphics
 - Creating a GUI version
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## Disclaimer
 
