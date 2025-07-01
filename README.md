@@ -126,7 +126,6 @@ Feel free to fork this project and submit pull requests for improvements such as
 - Adding sound effects or better graphics
 - Creating a GUI version
 
-
 ## Disclaimer
 
 This is a game for entertainment purposes only. Please gamble responsibly in real life! 🎲
